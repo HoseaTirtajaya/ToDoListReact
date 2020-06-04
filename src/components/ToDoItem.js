@@ -1,11 +1,12 @@
 import React from "react";
 import "../style.css";
 
-function ToDoItems() {
+function ToDoItems(props) {
+  console.log(props);
   return (
     <div className="todo-item">
-      <input type="checkbox" />
-      <span>To Do Item</span>
+      <input type="checkbox" checked={props.status} />
+      <span> {props.text}</span>
     </div>
   );
 }
